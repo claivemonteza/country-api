@@ -23,7 +23,7 @@ public class CountryApiApplication {
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 			public void AddCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("http://localhost:3000");
+				registry.addMapping("/**").allowedOrigins("https://covid19track-70ba5.web.app");
 			}
 		};
 	}
