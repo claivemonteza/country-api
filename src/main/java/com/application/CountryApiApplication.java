@@ -34,7 +34,7 @@ public class CountryApiApplication {
 		CorsConfiguration config = new CorsConfiguration();	
 		config.setAllowedOrigins(Arrays.asList("*"));
 		config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-		config.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
+		config.setAllowedHeaders(Arrays.asList("Origin", "Content-Type",
 				"Accept", "Authorization", "Origin, Accept", "X-Requested-With",
 				"Access-Control-Request-Method", "Access-Control-Request-Headers"));
 		config.setAllowCredentials(true);
