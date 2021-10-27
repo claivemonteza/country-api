@@ -21,15 +21,9 @@ public class CountryApiApplication {
 	@Bean
 	public CorsFilter corsFilter() {
 		
-		
-
-		List<String> list = new ArrayList<String>();
-		list.add("https://covid19track-70ba5.web.app/");
-		list.add("https://restcountries-91e47.firebaseapp.com/");
-		
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowCredentials(true);
-		corsConfiguration.setAllowedOrigins(Arrays.asList("https://covid19track-70ba5.web.app/"));
+		corsConfiguration.setAllowedOrigins(Arrays.asList("*"));
 		corsConfiguration.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
 				"Accept", "Authorization", "Origin, Accept", "X-Requested-With",
 				"Access-Control-Request-Method", "Access-Control-Request-Headers"));
