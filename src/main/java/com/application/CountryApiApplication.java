@@ -18,7 +18,7 @@ public class CountryApiApplication {
 		SpringApplication.run(CountryApiApplication.class, args);
 	}
 	
-	
+	/*
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
@@ -26,12 +26,26 @@ public class CountryApiApplication {
 				registry.addMapping("/**").allowedOrigins("*");
 			}
 		};
-	}
+	}*/
 	
-/*	@Bean
+	@Bean
 	public CorsFilter corsFilter() {
 		
-		CorsConfiguration config = new CorsConfiguration();
+		CorsConfiguration config = new CorsConfiguration();	
+		config.setAllowedOrigins(Arrays.asList("*"));
+		config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+		config.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
+				"Accept", "Authorization", "Origin, Accept", "X-Requested-With",
+				"Access-Control-Request-Method", "Access-Control-Request-Headers"));
+		config.setAllowCredentials(true);
+		
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		source.registerCorsConfiguration("/**", config);
+		return new CorsFilter(source);
+	}
+
+	/*
+	 * CorsConfiguration config = new CorsConfiguration();
 //		corsConfiguration.setAllowCredentials(true);
 		config.setAllowedOrigins(Arrays.asList("*"));
 		config.setAllowedHeaders(Arrays.asList("Origin", "Access-Control-Allow-Origin", "Content-Type",
@@ -44,8 +58,6 @@ public class CountryApiApplication {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		source.registerCorsConfiguration("/**", config);
 		return new CorsFilter(source);
-	}*/
-
-	
+	 * */
 
 }
