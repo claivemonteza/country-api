@@ -17,29 +17,38 @@ import com.application.repository.CountryRepository;
  */
 
 @Service
-public class CountryService {
+public class CountryService implements IService<Country>{
 
 	@Autowired
 	private CountryRepository countryRepository;
-	
 
-	public Country addCountry(Country country) {
-		return countryRepository.save(country);
+	@Override
+	public Country save(Country t){
+		return countryRepository.save(t);
 	}
 
-	public Country updateCountry(Country country) {
-		return countryRepository.save(country);
+	@Override
+	public Country edit(Country t) {
+		return countryRepository.save(t);
 	}
 
-	public void deleteCountry(Long id) {
+	@Override
+	public void delete(Long id) {
 		countryRepository.deleteById(id);
 	}
 
+	@Override
+	public Country get(Long t) {
+		return countryRepository.findById(t).get();
+	}
+
+	@Override
+	public List<Country> list() {
+		return countryRepository.findAll();
+	}
+	
 	public Country findCountryByName(String name) {
 		return countryRepository.findByName(name);
 	}
-
-	public List<Country> allCountries() {
-		return countryRepository.findAll();
-	}
+	
 }

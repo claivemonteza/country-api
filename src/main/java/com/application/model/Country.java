@@ -1,6 +1,7 @@
 package com.application.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,6 +24,7 @@ import lombok.Setter;
 @Setter 
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 @Table(name="country", uniqueConstraints = @UniqueConstraint(name = "uk_country_name_capital", columnNames = {
 		"name", "capital" }))
 public class Country {
