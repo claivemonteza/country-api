@@ -2,8 +2,6 @@ package com.application.controller;
 
 import java.util.List;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -50,7 +48,7 @@ public class CountryController{
 	}
 
 	@PutMapping(value = "/update")
-	public ResponseEntity<Country> edit(@RequestBody @Valid CountryEditDTO dto, @PathVariable("id") Long id) {
+	public ResponseEntity<Country> edit(@RequestBody CountryEditDTO dto, @PathVariable("id") Long id) {
 		Country updateCountry = this.countryService.edit(dto.toEntity(id));
 		return ResponseEntity.status(HttpStatus.OK).body(updateCountry);
 	}
