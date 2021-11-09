@@ -66,4 +66,14 @@ public class CountryController{
 	public Country findByName(@PathVariable("name") String name) {
 		return this.countryService.findCountryByName(name);
 	}
+	
+	
+	@GetMapping("/sortedBy/{property}")
+	public ResponseEntity<List<Country>> fetchCountriesSortedByProperties(@PathVariable("property") String property) {
+
+        List<Country> result = countryService.findAndSortAllByProperty(property);
+        return !result.isEmpty() ?
+                ResponseEntity.status(HttpStatus.FOUND).body(countryService.findAndSortAllByProperty(property)) :
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).body(countryService.findAndSortAllByProperty(property));
+    }
 }

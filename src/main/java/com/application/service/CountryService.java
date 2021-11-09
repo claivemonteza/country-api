@@ -3,6 +3,7 @@ package com.application.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.application.model.Country;
@@ -52,5 +53,10 @@ public class CountryService implements IService<Country> {
 	public Country findCountryByName(String name) {
 		return countryRepository.findByName(name);
 	}
+	
+	public List<Country> findAndSortAllByProperty(String property)
+    {
+        return countryRepository.findAll(Sort.by(property));
+    }
 
 }
