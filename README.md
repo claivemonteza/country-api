@@ -4,8 +4,8 @@ This project is a country restful api which contains 7 endpoints that allows for
 - Creating new countires
 - Updating existing countries
 - Deleting existing countries
-- Fetching a single country by ID
-- Fetching a single country by name
+- Fetching country by ID
+- Fetching country by name
 - Viewing a sorted list of all countries
 - Viewing a list of all countries
 
