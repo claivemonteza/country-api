@@ -53,3 +53,7 @@ The API base URL is https://country-api-restful.herokuapp.com/ and can be used t
 
 ## 🚀 Demo
  https://restcountries-91e47.firebaseapp.com
+
+
+## ✒️ Author
+[Claive Monteza!](https://github.com/claivemonteza)
