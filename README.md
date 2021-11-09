@@ -1,5 +1,8 @@
 # Country API
 
+## ✒️ Author
+[Claive Monteza](https://www.linkedin.com/in/claive-monteza-1b157a149/)
+
 <p align="center">
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#api">API</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -54,6 +57,3 @@ The API base URL is https://country-api-restful.herokuapp.com/ and can be used t
 ## 🚀 Demo
  https://restcountries-91e47.firebaseapp.com
 
-
-## ✒️ Author
-[Claive Monteza](https://www.linkedin.com/in/claive-monteza-1b157a149/)
