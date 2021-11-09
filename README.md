@@ -1,7 +1,7 @@
 # Country API
 
 <p align="center">
-  <a href="#🛠 Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#api">API</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#demo">Demo</a>
 </p>
@@ -15,10 +15,10 @@ This project is a country restful api which contains 7 endpoints that allows for
 - Viewing a sorted list of all countries
 - Viewing a list of all countries
 
-## ✒️ Author
+## Author ✒️
 [Claive Monteza](https://www.linkedin.com/in/claive-monteza-1b157a149/)
 
-## 🛠️ Technologies
+## Technologies
 
 - Spring Boot
 - Maven
@@ -50,8 +50,6 @@ The API base URL is https://country-api-restful.herokuapp.com/ and can be used t
 ### All Countries (GET)
 - endpoint -```/restcountries/v1/countries```
 
-
-
-## Demo
+## Demo 🚀 
  https://restcountries-91e47.firebaseapp.com
 
