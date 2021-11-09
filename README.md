@@ -29,25 +29,25 @@ This project is a country restful api which contains 7 endpoints that allows for
 The API base URL is https://country-api-restful.herokuapp.com/ and can be used to access the following endpoints :
 
 ### Add Country (POST)
-- endpoint -```sh /restcountries/v1/countries/save```
+- endpoint -```/restcountries/v1/countries/save```
 
 ### Update Country (PUT)
-- endpoint -```sh/restcountries/v1/countries/update/{id}```
+- endpoint -```/restcountries/v1/countries/update/{id}```
 
 ### Delete Country (DELETE)
-- endpoint -```sh /restcountries/v1/countries/delete/{id}```
+- endpoint -```/restcountries/v1/countries/delete/{id}```
 
 ### Fetch Country By Id (GET)
-- endpoint - ```sh /restcountries/v1/countries```
+- endpoint - ```/restcountries/v1/countries```
 
 ### Fetch Country By Name (GET)
 - endpoint -```sh /restcountries/v1/countries/find/{name}```
 
 ### Sorted Countries By Properties (GET)
-- endpoint -```sh /restcountries/v1/countries/sortedBy/{property}```
+- endpoint -```/restcountries/v1/countries/sortedBy/{property}```
 
 ### All Countries (GET)
-- endpoint -```sh /restcountries/v1/countries```
+- endpoint -```/restcountries/v1/countries```
 
 
 
