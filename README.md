@@ -56,4 +56,4 @@ The API base URL is https://country-api-restful.herokuapp.com/ and can be used t
 
 
 ## ✒️ Author
-[Claive Monteza!](https://github.com/claivemonteza)
+[Claive Monteza](https://github.com/claivemonteza)
