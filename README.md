@@ -17,7 +17,7 @@ This project is a country restful api which contains 7 endpoints that allows for
 
 
 
-## Technologies
+## 🛠️  Technologies
 
 - Spring Boot
 - Maven
@@ -51,5 +51,5 @@ The API base URL is https://country-api-restful.herokuapp.com/ and can be used t
 
 
 
-## Demo
+## 🚀 Demo
  https://restcountries-91e47.firebaseapp.com
