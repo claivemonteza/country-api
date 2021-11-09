@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.application.model.Country;
 import com.application.repository.CountryRepository;
 
-
 /**
  * @author Claive Monteza
  * 
@@ -17,18 +16,21 @@ import com.application.repository.CountryRepository;
  */
 
 @Service
-public class CountryService implements IService<Country>{
+public class CountryService implements IService<Country> {
 
 	@Autowired
 	private CountryRepository countryRepository;
 
 	@Override
-	public Country save(Country t){
+	public Country save(Country t) {
 		return countryRepository.save(t);
 	}
 
 	@Override
 	public Country edit(Country t) {
+		if (t.getId() == null) {
+			return null;
+		}
 		return countryRepository.save(t);
 	}
 
@@ -46,9 +48,9 @@ public class CountryService implements IService<Country>{
 	public List<Country> list() {
 		return countryRepository.findAll();
 	}
-	
+
 	public Country findCountryByName(String name) {
 		return countryRepository.findByName(name);
 	}
-	
+
 }

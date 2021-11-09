@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.application.dto.CountryEditDTO;
@@ -50,15 +51,15 @@ public class CountryController{
 	}
 
 	@PutMapping(value = "/update/{id}")
-	public ResponseEntity<Country> edit(@RequestBody @Valid CountryEditDTO dto, @PathVariable("id") Long id) {
+	public ResponseEntity<Country> edit(@Valid @RequestBody CountryEditDTO dto, @PathVariable("id") Long id) {
 		Country updateCountry = this.countryService.edit(dto.toEntity(id));
 		return ResponseEntity.status(HttpStatus.OK).body(updateCountry);
 	}
 
 	@DeleteMapping(value = "/delete/{id}")
-	public ResponseEntity<?> delete(@PathVariable("id") Long id) {
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void delete(@PathVariable("id") Long id) {
 		this.countryService.delete(id);
-		return ResponseEntity.ok().build();
 	}
 
 	@GetMapping(value = "/find/{name}")
