@@ -1,8 +1,5 @@
 # Country API
 
-## ✒️ Author
-[Claive Monteza](https://www.linkedin.com/in/claive-monteza-1b157a149/)
-
 <p align="center">
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#api">API</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -18,7 +15,8 @@ This project is a country restful api which contains 7 endpoints that allows for
 - Viewing a sorted list of all countries
 - Viewing a list of all countries
 
-
+## ✒️ Author
+[Claive Monteza](https://www.linkedin.com/in/claive-monteza-1b157a149/)
 
 ## 🛠️  Technologies
 
