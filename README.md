@@ -1,7 +1,7 @@
 # Country API
 
 <p align="center">
-  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#🛠️ Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#api">API</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#demo">Demo</a>
 </p>
@@ -18,7 +18,7 @@ This project is a country restful api which contains 7 endpoints that allows for
 ## ✒️ Author
 [Claive Monteza](https://www.linkedin.com/in/claive-monteza-1b157a149/)
 
-## 🛠️  Technologies
+## 🛠️ Technologies
 
 - Spring Boot
 - Maven
