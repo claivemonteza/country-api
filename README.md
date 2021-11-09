@@ -23,24 +23,24 @@ https://restcountries-91e47.firebaseapp.com/
 ## API
 The API base URL is https://country-api-restful.herokuapp.com/ and can be used to access the following endpoints :
 
-### addCountry (POST)
+### Add Country (POST)
 - endpoint - /restcountries/v1/countries/save
 
-### updateCountry (PUT)
+### Update Country (PUT)
 - endpoint - /restcountries/v1/countries/update/{id}
 
-### deleteCountry (DELETE)
+### Delete Country (DELETE)
 - endpoint - /restcountries/v1/countries/delete/{id}
 
-### fetchSingleCountryById (GET)
+### Fetch Country By Id (GET)
 - endpoint - /restcountries/v1/countries
 
-### fetchSingleCountryByName (GET)
+### Fetch Country By Name (GET)
 - endpoint - /restcountries/v1/countries/find/{name}
 
-### fetchCountriesSortedByProperties (GET)
+### Sorted Countries By Properties (GET)
 - endpoint - /restcountries/v1/countries/sortedBy/{property}
 
-### fetchAllCountries (GET)
+### All Countries (GET)
 - endpoint - /restcountries/v1/countries
 
