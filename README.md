@@ -1,4 +1,4 @@
-# country-api
+# Country API
 
 This project is a country restful api which contains 7 endpoints that allows for :
 - Creating new countires
