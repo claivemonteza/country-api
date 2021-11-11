@@ -1,6 +1,6 @@
 package com.application.repository.query;
 
-import com.application.model.Country;
+import com.application.domain.Country;
 
 
 /**
