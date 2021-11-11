@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.application.domain.Country;
 import com.application.dto.CountryEditDTO;
 import com.application.dto.CountrySaveDTO;
-import com.application.model.Country;
 import com.application.service.CountryService;
 
 
@@ -41,30 +41,36 @@ public class CountryController{
 
 	@GetMapping
 	public List<Country> all() {
-		return this.countryService.list();
+		return countryService.list();
 	}
 
 	@PostMapping(value = "/save")
 	public ResponseEntity<Country> save(@RequestBody CountrySaveDTO dto) {
-		Country newCountry = this.countryService.save(dto.toEntity());
+		Country newCountry = countryService.save(dto.toEntity());
 		return ResponseEntity.status(HttpStatus.CREATED).body(newCountry);
 	}
 
 	@PutMapping(value = "/update/{id}")
 	public ResponseEntity<Country> edit(@Valid @RequestBody CountryEditDTO dto, @PathVariable("id") Long id) {
-		Country updateCountry = this.countryService.edit(dto.toEntity(id));
+		Country updateCountry = countryService.edit(dto.toEntity(id));
 		return ResponseEntity.status(HttpStatus.OK).body(updateCountry);
 	}
 
 	@DeleteMapping(value = "/delete/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable("id") Long id) {
-		this.countryService.delete(id);
+		countryService.delete(id);
 	}
 
-	@GetMapping(value = "/find/{name}")
+	
+	@GetMapping(value = "/find/{id}")
+	public Country findById(@PathVariable("id") Long id) {
+		return countryService.get(id);
+	}
+	
+	@GetMapping(value = "/findByName/{name}")
 	public Country findByName(@PathVariable("name") String name) {
-		return this.countryService.findCountryByName(name);
+		return countryService.findCountryByName(name);
 	}
 	
 	
