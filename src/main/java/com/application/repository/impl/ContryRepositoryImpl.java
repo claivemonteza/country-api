@@ -7,7 +7,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import com.application.model.Country;
+import com.application.domain.Country;
 import com.application.repository.query.CountryRepositoryQuery;
 
 

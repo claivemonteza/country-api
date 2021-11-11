@@ -1,6 +1,6 @@
 package com.application.dto;
 
-import com.application.model.Country;
+import com.application.domain.Country;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
