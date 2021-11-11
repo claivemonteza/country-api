@@ -50,5 +50,5 @@ The API base URL is https://country-api-restful.herokuapp.com/ and can be used t
 - endpoint -```/restcountries/v1/countries```
 
 ## Demo
- https://restcountries-91e47.firebaseapp.com
+https://restcountries-a2ea5.firebaseapp.com/
 
