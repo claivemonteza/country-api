@@ -13,4 +13,5 @@ import com.application.domain.Country;
 public interface CountryRepositoryQuery {
 
 	public Country findByName(String name);
+	
 }

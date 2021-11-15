@@ -21,16 +21,16 @@ import com.application.repository.query.CountryRepositoryQuery;
 public class ContryRepositoryImpl implements CountryRepositoryQuery{
 
 	@PersistenceContext
-	private EntityManager manager;
+	private EntityManager entityManager;
 	
 	@Override
 	public Country findByName(String name) {
-		CriteriaBuilder builder = manager.getCriteriaBuilder();
+		CriteriaBuilder builder = entityManager.getCriteriaBuilder();
 		CriteriaQuery<Country> criteria = builder.createQuery(Country.class);
 		Root<Country> root = criteria.from(Country.class);
 		criteria.select(root);
 		criteria.where(builder.equal(root.get("name"),name));
-		TypedQuery<Country> query = manager.createQuery(criteria);
+		TypedQuery<Country> query = entityManager.createQuery(criteria);
 		return query.getSingleResult() ;
 	}
 
