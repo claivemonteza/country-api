@@ -1,6 +1,7 @@
 package com.application.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 import com.application.domain.Country;
@@ -15,7 +16,6 @@ import com.application.repository.query.CountryRepositoryQuery;
  */
 
 @Repository
-public interface CountryRepository extends JpaRepository<Country, Long>, CountryRepositoryQuery{
+public interface CountryRepository extends JpaRepository<Country, Long>, CountryRepositoryQuery, JpaSpecificationExecutor<Country>{
 	
-	Country findByName(String name);
 }
