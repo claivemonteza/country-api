@@ -1,6 +1,7 @@
 package com.application.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.validation.Valid;
 
@@ -14,12 +15,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.application.domain.Country;
 import com.application.dto.CountryEditDTO;
 import com.application.dto.CountrySaveDTO;
+import com.application.model.PageModel;
+import com.application.model.PageRequestModel;
 import com.application.service.CountryService;
 
 
@@ -40,8 +44,9 @@ public class CountryController{
 
 
 	@GetMapping
-	public List<Country> all() {
-		return countryService.list();
+	public PageModel<Country> all(@RequestParam Map<String, String> params) {
+		PageRequestModel p = new PageRequestModel(params);
+		return countryService.list(p);
 	}
 
 	@PostMapping(value = "/save")

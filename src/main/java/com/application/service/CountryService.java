@@ -4,11 +4,16 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import com.application.domain.Country;
+import com.application.model.PageModel;
+import com.application.model.PageRequestModel;
 import com.application.repository.CountryRepository;
+import com.application.specification.CountrySpecification;
 
 /**
  * @author Claive Monteza
@@ -18,18 +23,16 @@ import com.application.repository.CountryRepository;
  */
 
 @Service
-public class CountryService implements IService<Country> {
+public class CountryService {
 
 	@Autowired
 	private CountryRepository countryRepository;
 
-	@Override
 	public Country save(Country t) {
-return countryRepository.save(t);
+		return countryRepository.save(t);
 
 	}
 
-	@Override
 	public Country edit(Country t) {
 		if (t.getId() == null) {
 			return null;
@@ -37,20 +40,21 @@ return countryRepository.save(t);
 		return countryRepository.save(t);
 	}
 
-	@Override
 	public void delete(Long id) {
 		countryRepository.deleteById(id);
 	}
 
-	@Override
 	public Country get(Long t) {
-		return countryRepository.findById(t).orElseThrow(
-				() -> new EmptyResultDataAccessException("Country not found", 1));
+		return countryRepository.findById(t)
+				.orElseThrow(() -> new EmptyResultDataAccessException("Country not found", 1));
 	}
 
-	@Override
-	public List<Country> list() {
-		return countryRepository.findAll();
+	public PageModel<Country> list(PageRequestModel p) {
+		Specification<Country> spec = CountrySpecification.search("");
+		Page<Country> page = countryRepository.findAll(spec, p.toPageRequest());
+		PageModel<Country> pm = new PageModel<>(page.getTotalElements(), page.getNumber(), page.getTotalPages(),
+				page.getSize(), page.getContent());
+		return pm;
 	}
 
 	public Country findCountryByName(String name) {
