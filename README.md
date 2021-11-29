@@ -26,7 +26,7 @@ This project is a country restful api which contains 7 endpoints that allows for
 
 
 ## API
-The API base URL is https://calculator-rest-api.herokuapp.com/ and can be used to access the following endpoints :
+The API base URL is https://country-api-restful.herokuapp.com/ and can be used to access the following endpoints :
 
 ### Add Country (POST)
 - endpoint -```/restcountries/v1/countries/save```
