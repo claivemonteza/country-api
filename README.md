@@ -41,7 +41,7 @@ The API base URL is https://country-api-restful.herokuapp.com/ and can be used t
 - endpoint - ```/restcountries/v1/countries```
 
 ### Fetch Country By Name (GET)
-- endpoint -```sh /restcountries/v1/countries/find/{name}```
+- endpoint -```/restcountries/v1/countries/find/{name}```
 
 ### Sorted Countries By Properties (GET)
 - endpoint -```/restcountries/v1/countries/sortedBy/{property}```
