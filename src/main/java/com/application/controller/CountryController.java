@@ -22,6 +22,8 @@ import com.application.dto.CountryEditDTO;
 import com.application.dto.CountrySaveDTO;
 import com.application.service.CountryService;
 
+import io.swagger.annotations.ApiOperation;
+
 
 /**
  * @author Claive Monteza
@@ -40,6 +42,7 @@ public class CountryController{
 
 
 	@GetMapping
+	@ApiOperation("Show a list")
 	public List<Country> all() {
 		return countryService.list();
 	}
