@@ -15,6 +15,10 @@ This project is a country restful api which contains 7 endpoints that allows for
 - Viewing a sorted list of all countries
 - Viewing a list of all countries
 
+<div align="center">
+  <img alt="image" src="https://raw.githubusercontent.com/claivemonteza/country-api/main/image.png">
+</div>
+
 ## Author
 [Claive Monteza](https://www.linkedin.com/in/claive-monteza-1b157a149/)
 
