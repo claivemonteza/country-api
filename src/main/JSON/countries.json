@@ -1,0 +1,51 @@
+[
+	{
+		"name": "Angola",
+		"capital": "Luanda",
+		"subregion": "Middle Africa",
+		"region": "Africa",
+		"area": 1246700
+	},
+	{
+		"name": "Brazil",
+		"capital": "Brasília",
+		"subregion": "South America",
+		"region": "Americas",
+		"area": 8515767
+	},
+	{
+		"name": "Cabo Verde",
+		"capital": "Praia",
+		"subregion": "Western Africa",
+		"region": "Africa",
+		"area": 4033
+	},
+	{
+		"name": "Guinea-Bissau",
+		"capital": "Bissau",
+		"subregion": "Western Africa",
+		"region": "Africa",
+		"area": 36125
+	},
+	{
+		"name": "Mozambique",
+		"capital": "Maputo",
+		"subregion": "Eastern Africa",
+		"region": "Africa",
+		"area": 801590
+	},
+	{
+		"name": "Portugal",
+		"capital": "Lisbon",
+		"subregion": "Southern Europe",
+		"region": "Europe",
+		"area": 92090
+	},
+	{
+		"name": "São Tomé e Príncipe",
+		"capital": "São Tomé",
+		"subregion": "Middle Africa",
+		"region": "Africa",
+		"area": 964
+	}
+]
