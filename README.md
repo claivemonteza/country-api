@@ -19,9 +19,6 @@ This project is a country restful api which contains 7 endpoints that allows for
   <img alt="image" src="https://raw.githubusercontent.com/claivemonteza/country-api/main/image.png">
 </div>
 
-## Author
-[Claive Monteza](https://www.linkedin.com/in/claive-monteza-1b157a149/)
-
 ## Technologies
 - Spring Boot
 - Maven
