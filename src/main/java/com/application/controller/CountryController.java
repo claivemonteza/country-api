@@ -49,7 +49,6 @@ public class CountryController{
 			@ApiResponse(responseCode = "404", description="Not found")
 	})
 	@GetMapping
-	@ApiOperation("Show a list")
 	public List<Country> all() {
 		return countryService.list();
 	}
