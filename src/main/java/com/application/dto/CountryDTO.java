@@ -11,13 +11,17 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CountryEditDTO {
+public class CountryDTO {
 	
 	private String name;
 	private String capital;
 	private String region;
 	private String subregion;
 	private double area;
+	
+	public Country toEntity() {
+		return new Country(null, name, capital, region, subregion, area);
+	}
 	
 	public Country toEntity(Long id) {
 		return new Country(id, name, capital, region, subregion, area);
