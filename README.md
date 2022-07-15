@@ -53,6 +53,9 @@ The API base URL is https://country-api-restful.herokuapp.com/ and can be used t
 ### All Countries (GET)
 - endpoint -```/restcountries/v1/countries```
 
+## TEST API
+https://country-api-restful.herokuapp.com/swagger-ui/swagger-ui/index.html
+
 ## Demo
 https://restcountries-a2ea5.firebaseapp.com/
 
